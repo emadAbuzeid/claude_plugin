@@ -1,6 +1,7 @@
 package dev.emad.claudechat.cli
 
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.serializer
 
 /**
  * Codec para el protocolo NDJSON (JSON delimitado por saltos de línea) que emite el CLI de
@@ -51,7 +52,7 @@ class StreamJsonCodec(val json: Json = DEFAULT_JSON) {
      * @return cadena JSON sin salto de línea al final
      */
     inline fun <reified T> encodeLine(value: T): String =
-        json.encodeToString(value)
+        json.encodeToString(serializer<T>(), value)
 
     companion object {
         /**
