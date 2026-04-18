@@ -58,7 +58,7 @@ intellijPlatform {
 
 tasks {
     wrapper {
-        gradleVersion = "8.11"
+        gradleVersion = "9.1.0"
     }
 
     test {
