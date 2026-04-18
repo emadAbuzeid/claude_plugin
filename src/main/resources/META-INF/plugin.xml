@@ -1,0 +1,28 @@
+<idea-plugin>
+    <id>dev.emad.claudechat</id>
+    <name>Claude Chat</name>
+    <vendor email="emad.abuzeidalvarez@telefonica.com" url="https://github.com/emadAbuzeid/claude_plugin">
+        Emad Abuzeid
+    </vendor>
+
+    <description><![CDATA[
+        Native chat tool window for Claude Code inside IntelliJ-based IDEs.
+        <br/><br/>
+        Wraps the <code>claude</code> CLI and renders streamed messages, tool calls,
+        and diffs with a first-class UI — no terminal embedding.
+        <br/><br/>
+        Requires the Claude Code CLI to be installed and authenticated on your machine.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <resource-bundle>messages.ClaudeChatBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow
+            id="Claude Chat"
+            anchor="right"
+            factoryClass="dev.emad.claudechat.ui.ChatToolWindowFactory"
+            icon="dev.emad.claudechat.ClaudeChatIcons.ToolWindow"/>
+    </extensions>
+</idea-plugin>
