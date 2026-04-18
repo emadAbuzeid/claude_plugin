@@ -1,5 +1,6 @@
-# Gradle
+# Gradle / Kotlin
 .gradle/
+.kotlin/
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -26,3 +27,6 @@ hs_err_pid*
 # Local overrides
 local.properties
 gradle-local.properties
+
+# CLI fixtures — generated locally, contain session metadata
+src/test/resources/fixtures/*.ndjson
